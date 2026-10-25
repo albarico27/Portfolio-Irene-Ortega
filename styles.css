@@ -423,6 +423,26 @@ img { display: block; max-width: 100%; }
   shape-outside: url("assets/img/irene-doodle.webp?v=2");
   shape-margin: 14px;
 }
+.about__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 11px 20px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  transition: background .2s ease, transform .2s var(--ease-out);
+}
+.about__cta span { transition: transform .2s var(--ease-out); }
+.about__cta:hover, .about__cta:focus-visible { background: var(--ink-deep); }
+.about__cta:hover span, .about__cta:focus-visible span { transform: translateX(3px); }
+.about__cta:active { transform: scale(.97); }
+.about__cta:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
 /* hand-written "bla bla" next to Irene's head, anchored to the photo so it follows its size */
 .about__bla {
   position: absolute;
@@ -520,9 +540,11 @@ img { display: block; max-width: 100%; }
   .win__bar { height: 44px; }
   .win__dots span, .win__dots button { width: 14px; height: 14px; }
   .win__close svg { opacity: 1; }
-  .about { --photo-w: 300px; display: flex; flex-direction: column; height: auto; min-height: 100%; padding: 24px 20px 0; }
-  .about__spacer { display: none; }
-  .about__photo { order: 1; align-self: flex-end; float: none; margin: auto -20px 0 0; shape-outside: none; }
+  /* the photo floats in the middle of the text, which wraps around her silhouette */
+  .about { --photo-w: min(230px, 52vw); --photo-top: 170px; display: flow-root; height: auto; min-height: 100%; padding: 24px 20px; }
+  .about__spacer { height: var(--photo-top); }
+  .about__photo { margin: 0 -20px 0 4px; shape-margin: 8px; }
+  .about__bla { top: calc(24px + var(--photo-top) - var(--photo-w) * .1); bottom: auto; right: 6px; }
   .gallery { grid-template-columns: 1fr; }
 }
 

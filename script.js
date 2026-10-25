@@ -151,16 +151,16 @@ const ABOUT = {
       'De pequeña me castigaban escribiendo y ahora soy copy.',
       'Mi cerebro siempre ha ido más rápido que yo, así que después de estudiar Publicidad y Marketing, hice el Máster de Creatividad Publicitaria en TAG. Como tampoco puedo estarme quieta, me formé en Diseño Gráfico y Dirección de Arte en el CEI.',
       'He trabajado para PlayStation, Santalucía Seguros, Acciona Inmobiliaria, Carrefour y Mondelēz, entre otras.',
-      'Y hasta aquí puedo escribir. ¿Hablamos?',
+      'Y hasta aquí puedo escribir.',
     ],
   },
   en: {
-    hello: 'Hi, I’m Irene!',
+    hello: 'hi, I’m Irene!',
     paragraphs: [
       'I used to get punished by being made to write lines. Now I’m a copywriter.',
       'My brain has always been faster than I am, so after studying Advertising and Marketing, I went on to earn a Master’s in Creative Advertising at TAG. And because I can’t sit still for too long, I also trained in Graphic Design and Art Direction at CEI.',
       'I’ve worked with PlayStation, Santalucía Seguros, Acciona Inmobiliaria, Carrefour and Mondelēz, among others.',
-      'And that’s all I can write for now. Shall we talk?',
+      'And that’s all I can write for now.',
     ],
   },
 };
@@ -173,6 +173,7 @@ const UI = {
     work: 'Trabajos',
     about: 'Sobre mí',
     contact: 'Contacto',
+    aboutCta: '¿Hablamos?',
     callMe: 'Llámame',
     writeMe: 'Escríbeme',
     sendEmail: 'Enviar email',
@@ -197,6 +198,7 @@ const UI = {
     work: 'Work',
     about: 'About me',
     contact: 'Contact',
+    aboutCta: 'Shall we talk?',
     callMe: 'Call me',
     writeMe: 'Write to me',
     sendEmail: 'Send email',
@@ -568,6 +570,7 @@ function aboutBody() {
       <img class="about__bla" src="assets/img/blabla.webp" alt="" aria-hidden="true">
       <h2><span class="slash">/</span>${hello}</h2>
       ${paragraphs.map((text) => `<p>${text}</p>`).join('')}
+      <button class="about__cta" data-open="contact">${t('aboutCta')} <span aria-hidden="true">→</span></button>
     </div>`);
 }
 
