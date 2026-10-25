@@ -148,15 +148,19 @@ const ABOUT = {
   es: {
     hello: 'hola, soy Irene!',
     paragraphs: [
-      'A pesar de todas las advertencias, estudie Publicidad y Marketing y después hice el Máster de Creatividad Publicitaria en TAG.',
-      'Soy copy, pero tengo mucho arte aunque no sepa dar palmas. He trabajado para PlayStation, Santalucía Seguros, Acciona Inmobiliaria, Carrefour y Mondelez, entre otras.',
+      'De pequeña me castigaban escribiendo y ahora soy copy.',
+      'Mi cerebro siempre ha ido más rápido que yo, así que después de estudiar Publicidad y Marketing, hice el Máster de Creatividad Publicitaria en TAG. Como tampoco puedo estarme quieta, me formé en Diseño Gráfico y Dirección de Arte en el CEI.',
+      'He trabajado para PlayStation, Santalucía Seguros, Acciona Inmobiliaria, Carrefour y Mondelēz, entre otras.',
+      'Y hasta aquí puedo escribir. ¿Hablamos?',
     ],
   },
   en: {
     hello: 'Hi, I’m Irene!',
     paragraphs: [
-      'Despite all the warnings, I went on to study Advertising and Marketing, followed by a Master’s in Advertising Creativity at TAG.',
-      'I’m a copywriter, but I’ve got plenty of artistic flair—even if I can’t clap in rhythm. I’ve worked with brands such as PlayStation, Santalucía Seguros, Acciona Inmobiliaria, Carrefour, and Mondelez, among others.',
+      'I used to get punished by being made to write lines. Now I’m a copywriter.',
+      'My brain has always been faster than I am, so after studying Advertising and Marketing, I went on to earn a Master’s in Creative Advertising at TAG. And because I can’t sit still for too long, I also trained in Graphic Design and Art Direction at CEI.',
+      'I’ve worked with PlayStation, Santalucía Seguros, Acciona Inmobiliaria, Carrefour and Mondelēz, among others.',
+      'And that’s all I can write for now. Shall we talk?',
     ],
   },
 };
