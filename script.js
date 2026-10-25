@@ -146,7 +146,7 @@ const WHERE = {
 
 const ABOUT = {
   es: {
-    hello: '¡Hola, soy Irene!',
+    hello: 'hola, soy Irene!',
     paragraphs: [
       'A pesar de todas las advertencias, estudie Publicidad y Marketing y después hice el Máster de Creatividad Publicitaria en TAG.',
       'Soy copy, pero tengo mucho arte aunque no sepa dar palmas. He trabajado para PlayStation, Santalucía Seguros, Acciona Inmobiliaria, Carrefour y Mondelez, entre otras.',
@@ -560,7 +560,8 @@ function aboutBody() {
   return h(`
     <div class="about">
       <span class="about__spacer" aria-hidden="true"></span>
-      <img class="about__photo" src="assets/img/irene.webp" alt="Irene Ortega">
+      <img class="about__photo" src="assets/img/irene-doodle.webp?v=2" alt="Irene Ortega">
+      <img class="about__bla" src="assets/img/blabla.webp" alt="" aria-hidden="true">
       <h2><span class="slash">/</span>${hello}</h2>
       ${paragraphs.map((text) => `<p>${text}</p>`).join('')}
     </div>`);

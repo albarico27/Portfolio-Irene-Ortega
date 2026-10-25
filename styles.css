@@ -400,8 +400,9 @@ img { display: block; max-width: 100%; }
 /* ---------- About window ---------- */
 
 .about {
-  --photo-w: 360px;
-  --photo-h: calc(var(--photo-w) * 1.236); /* irene.webp is 1200×1483 */
+  --photo-w: 500px;
+  --photo-h: calc(var(--photo-w) * .9025); /* irene-doodle.webp is 1200×1083 */
+  position: relative;
   height: 100%;
   padding: 36px 44px 0;
   background: var(--bg);
@@ -419,8 +420,16 @@ img { display: block; max-width: 100%; }
   width: var(--photo-w);
   height: var(--photo-h);
   margin: 0 -44px 0 12px;
-  shape-outside: url("assets/img/irene.webp");
+  shape-outside: url("assets/img/irene-doodle.webp?v=2");
   shape-margin: 14px;
+}
+/* hand-written "bla bla" next to Irene's head, anchored to the photo so it follows its size */
+.about__bla {
+  position: absolute;
+  right: 22px;
+  bottom: calc(var(--photo-h) * .64);
+  width: calc(var(--photo-w) * .36);
+  pointer-events: none;
 }
 
 /* ---------- Contact popup ---------- */
@@ -511,7 +520,7 @@ img { display: block; max-width: 100%; }
   .win__bar { height: 44px; }
   .win__dots span, .win__dots button { width: 14px; height: 14px; }
   .win__close svg { opacity: 1; }
-  .about { --photo-w: 190px; display: flex; flex-direction: column; height: auto; min-height: 100%; padding: 24px 20px 0; }
+  .about { --photo-w: 300px; display: flex; flex-direction: column; height: auto; min-height: 100%; padding: 24px 20px 0; }
   .about__spacer { display: none; }
   .about__photo { order: 1; align-self: flex-end; float: none; margin: auto -20px 0 0; shape-outside: none; }
   .gallery { grid-template-columns: 1fr; }
