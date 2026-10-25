@@ -388,14 +388,18 @@ function openWindow({ id, title, width, height, render, origin }) {
   // client sizes, not getBoundingClientRect: the desktop may still be mid zoom-in animation
   const area = { width: $('#windows').clientWidth, height: $('#windows').clientHeight, top: $('#windows').offsetTop };
   const n = openWindows.size;
-  const w = Math.min(width || 980, area.width - 40);
-  const hgt = Math.min(height || 640, area.height - 60);
+  // on phones the window still floats, just with tighter margins
+  const gapX = isMobile() ? 10 : 20;
+  const gapY = isMobile() ? 40 : 14;
+  const step = isMobile() ? 14 : 26;
+  const w = Math.min(width || 980, area.width - gapX * 2);
+  const hgt = Math.min(height || 640, area.height - gapY * 2 - (isMobile() ? 20 : 32));
   win.style.width = `${w}px`;
   win.style.height = `${hgt}px`;
 
   // centered on screen; each extra window shifts a bit so they don't stack exactly
-  const left = Math.max(20, Math.min((area.width - w) / 2 + n * 26, area.width - w - 20));
-  const top = Math.max(14, Math.min((area.height - hgt) / 2 + n * 26, area.height - hgt - 14));
+  const left = Math.max(gapX, Math.min((area.width - w) / 2 + n * step, area.width - w - gapX));
+  const top = Math.max(gapY, Math.min((area.height - hgt) / 2 + n * step, area.height - hgt - gapY));
   win.style.left = `${left}px`;
   win.style.top = `${top}px`;
 
@@ -442,7 +446,7 @@ function closeWindow(id) {
 function makeDraggable(win) {
   const bar = $('.win__bar', win);
   bar.addEventListener('pointerdown', (e) => {
-    if (isMobile() || e.target.closest('button')) return;
+    if (e.target.closest('button')) return;
     const startX = e.clientX;
     const startY = e.clientY;
     const left = win.offsetLeft;
