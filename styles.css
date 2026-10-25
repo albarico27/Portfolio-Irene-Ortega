@@ -540,20 +540,14 @@ img { display: block; max-width: 100%; }
   .win__bar { height: 44px; }
   .win__dots span, .win__dots button { width: 14px; height: 14px; }
   .win__close svg { opacity: 1; }
-  /* Irene sits at the bottom-right, the text wraps around her and the button stays bottom-left */
-  .about { --photo-w: min(250px, 64vw); --cta-space: 76px; padding: 22px 20px var(--cta-space); font-size: 16px; line-height: 1.5; }
+  /* Irene floats inside the text, from the second paragraph on, and the button follows the text */
+  .about { --photo-w: min(250px, 64vw); --photo-top: 118px; display: flow-root; height: auto; min-height: 0; padding: 22px 20px; font-size: 16px; line-height: 1.5; }
   .about h2 { margin-bottom: 14px; }
-  .about__spacer { height: calc(100% - var(--photo-h) + var(--cta-space)); }
-  .about__photo { margin: 0 -20px calc(var(--cta-space) * -1) 4px; shape-margin: 8px; }
-  .about__bla { right: 6px; }
-  .about__cta { position: absolute; left: 20px; bottom: 20px; margin: 0; padding: 10px 17px; font-size: 15px; }
+  .about__spacer { height: var(--photo-top); }
+  .about__photo { margin: 0 -20px 0 4px; shape-margin: 8px; }
+  .about__bla { top: calc(22px + var(--photo-top) - var(--photo-w) * .1); bottom: auto; right: 6px; }
+  .about__cta { margin-top: 6px; padding: 10px 17px; font-size: 15px; }
   .gallery { grid-template-columns: 1fr; }
-}
-
-/* short phones: not enough room for everything, so the button goes back under the text and the window scrolls */
-@media (max-width: 720px) and (max-height: 700px) {
-  .about { --cta-space: 0px; padding-bottom: 22px; }
-  .about__cta { position: static; margin-top: 4px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

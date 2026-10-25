@@ -418,6 +418,8 @@ function openWindow({ id, title, width, height, render, origin }) {
   const entry = { el: win, title, render };
   fillWindow(entry);
   $('#windows').append(win);
+  win.dataset.maxHeight = hgt;
+  fitToContent(win);
   openWindows.set(id, entry);
   win.addEventListener('pointerdown', () => focusWindow(win));
   $('.win__close', win).addEventListener('click', (e) => { e.stopPropagation(); closeWindow(id); });
@@ -435,7 +437,18 @@ function fillWindow({ el, title, render }) {
 }
 
 function rerenderWindows() {
-  openWindows.forEach(fillWindow);
+  openWindows.forEach((entry) => { fillWindow(entry); fitToContent(entry.el); });
+}
+
+// phones: shrink the window to its content (never taller than the screen allows) and re-center it
+function fitToContent(win) {
+  if (!isMobile()) return;
+  const max = Number(win.dataset.maxHeight);
+  win.style.height = `${max}px`;
+  const body = $('.win__body', win);
+  const need = Math.min(max, win.offsetHeight - body.clientHeight + body.scrollHeight);
+  win.style.height = `${need}px`;
+  win.style.top = `${Math.max(24, ($('#windows').clientHeight - need) / 2)}px`;
 }
 
 function closeWindow(id) {
