@@ -21,8 +21,8 @@ const PROJECTS = [
     title: { es: 'Voces Inocentes', en: 'Innocent Voices' },
     where: 'TAG',
     insight: {
-      es: 'Cuando pensamos en la guerra, pensamos en soldados. No en niños.',
-      en: 'When we think of war, we think of soldiers. Not children.',
+      es: 'Cuando pensamos en la guerra pensamos en soldados, no en niños.',
+      en: 'When we think of war we think of soldiers, not children.',
     },
     idea: {
       es: 'Cambiar las voces de los jugadores por voces infantiles, para mostrar una realidad que también forma parte de la guerra.',
@@ -108,8 +108,8 @@ const PROJECTS = [
     title: '@BASQ3R_',
     where: 'TAG',
     insight: {
-      es: 'Intentas elegir un nombre de usuario, pero como siempre está cogido, acabas tecleando al azar.',
-      en: 'You try to pick a username, but since it’s always taken, you end up typing at random.',
+      es: 'Intentas elegir un nombre de usuario pero, como siempre está cogido, acabas tecleando al azar.',
+      en: 'You try to pick a username but, since it’s always taken, you end up typing at random.',
     },
     idea: {
       es: 'Si tu nombre de usuario siempre está cogido, prueba en euskera. Igual acabas descubriendo el País Vasco.',
