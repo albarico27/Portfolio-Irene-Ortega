@@ -396,10 +396,11 @@ function openWindow({ id, title, width, height, render, origin }) {
   const n = openWindows.size;
   // on phones the window still floats, just with tighter margins
   const gapX = isMobile() ? 10 : 20;
-  const gapY = isMobile() ? 40 : 14;
+  const gapY = isMobile() ? 24 : 14;
   const step = isMobile() ? 14 : 26;
   const w = Math.min(width || 980, area.width - gapX * 2);
-  const hgt = Math.min(height || 640, area.height - gapY * 2 - (isMobile() ? 20 : 32));
+  // phones get almost the full height so the content fits without scrolling
+  const hgt = isMobile() ? area.height - gapY * 2 - 20 : Math.min(height || 640, area.height - gapY * 2 - 32);
   win.style.width = `${w}px`;
   win.style.height = `${hgt}px`;
 
