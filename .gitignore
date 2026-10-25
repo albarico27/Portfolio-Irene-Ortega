@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependencias y builds (por si se añaden en el futuro)
+node_modules/
+dist/
+.cache/
+
+# Logs y variables de entorno
+*.log
+.env
+.env.*
+
+# Claude Code
+.claude/

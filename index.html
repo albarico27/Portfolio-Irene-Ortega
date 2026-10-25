@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Irene Ortega — Creative Copywriter</title>
+  <meta name="description" content="Soy Irene! Escribo cosas para que pasen cosas. Portfolio de Irene Ortega, Creative Copywriter.">
+  <meta property="og:title" content="Irene Ortega — Creative Copywriter">
+  <meta property="og:description" content="Soy Irene! Escribo cosas para que pasen cosas.">
+  <meta name="theme-color" content="#f5f2f3">
+  <link rel="icon" href="assets/img/about-a.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+
+  <!-- ============ LOCK SCREEN / FACE ID ============ -->
+  <div id="lock" class="lock" aria-live="polite">
+    <div class="faceid" id="faceid">
+      <div class="faceid__icon">
+        <svg class="faceid__glyph" viewBox="0 0 100 100" aria-hidden="true">
+          <g class="glyph-corners">
+            <path d="M8 32V20A12 12 0 0 1 20 8h12" />
+            <path d="M68 8h12a12 12 0 0 1 12 12v12" />
+            <path d="M92 68v12a12 12 0 0 1-12 12H68" />
+            <path d="M32 92H20A12 12 0 0 1 8 80V68" />
+          </g>
+          <g class="glyph-face">
+            <path d="M34 36v8" />
+            <path d="M66 36v8" />
+            <path d="M51 36v19h-5" />
+            <path d="M36 68q14 10 28 0" />
+          </g>
+          <line class="glyph-scan" x1="14" y1="20" x2="86" y2="20" />
+        </svg>
+        <svg class="faceid__check" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="40" />
+          <path d="M32 51l12 12 24-26" />
+        </svg>
+      </div>
+      <p class="faceid__title">Face ID</p>
+      <p class="faceid__msg" data-msg></p>
+    </div>
+  </div>
+
+  <!-- ============ DESKTOP ============ -->
+  <div id="desktop" class="desktop" aria-hidden="true">
+
+    <div class="lang" role="group" data-i18n-aria="language">
+      <button class="lang__btn" data-lang="es" lang="es" aria-label="Español">ES</button>
+      <button class="lang__btn" data-lang="en" lang="en" aria-label="English">EN</button>
+    </div>
+
+    <div class="wallpaper" aria-hidden="true">
+      <img class="wallpaper__stickman" src="assets/img/stickman.svg" alt="">
+    </div>
+
+    <div class="desk-title">
+      <span class="desk-title__slash" aria-hidden="true">/</span>
+      <h1 class="desk-title__name">Irene Ortega</h1>
+      <p class="desk-title__role">Creative Copywriter</p>
+    </div>
+
+    <main class="icons" id="icons" data-i18n-aria="desktop">
+      <!-- folders injected by script.js -->
+    </main>
+
+    <div id="windows" class="windows"></div>
+
+  </div>
+
+  <script src="script.js?v=9"></script>
+</body>
+</html>

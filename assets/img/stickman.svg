@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 190 254" fill="none" stroke="#021f94" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Muñeco vectorial (calcado del GIF original): dos poses que se alternan cada 0,5 s -->
+  <style>
+    .pose-a { animation: pose-a 1s step-end infinite; }
+    .pose-b { animation: pose-b 1s step-end infinite; }
+    @keyframes pose-a { 0% { opacity: 1; } 50% { opacity: 0; } }
+    @keyframes pose-b { 0% { opacity: 0; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .pose-a, .pose-b { animation: none; } .pose-b { opacity: 0; } }
+  </style>
+  <defs>
+    <path id="head" d="M57 3C38 3 25 16 27 30C29 44 45 51 62 52C72 53 80 52 84 46C90 37 89 20 81 11C74 4 64 1 52 4"/>
+  </defs>
+
+  <g class="pose-a">
+    <use href="#head"/>
+    <path d="M61 52L58 165"/>
+    <path d="M62 83L5 84L4 125"/>
+    <path d="M62 83L109 100L123 47"/>
+    <path d="M58 165L98 138L127 163L144 126"/>
+    <path d="M58 165L12 184L43 221L2 244"/>
+  </g>
+
+  <g class="pose-b">
+    <use href="#head" transform="translate(36 0)"/>
+    <path d="M97 52L95 163"/>
+    <path d="M97 98L7 41"/>
+    <path d="M97 98L177 46"/>
+    <path d="M95 163L51 184L2 136L13 115"/>
+    <path d="M95 163L151 172L147 218L179 231"/>
+  </g>
+</svg>
